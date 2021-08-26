@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --bg: #fff;
+    --bg-accent: #ce6c47;
+    --text-color: #202124;
+    --nav-size: 60px;
+    --border: 1px solid #474a4d;
+    --border-radius: 8px;
+    --speed: 500ms;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar {
+    height: var(--nav-size);
+    background-color: var(--bg);
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+        0 2px 6px 2px rgb(60 64 67 / 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 24px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    width: calc(var(--nav-size) * 0.7);
+
+    margin-left: auto;
+}
+
+.maincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.menubar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+        0 2px 6px 2px rgb(60 64 67 / 15%);
+    transition: width 400ms ease;
+    background-color: var(--bg-secondary);
+}
+
+.menubar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    transition: 600ms;
+    justify-content: center;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+    color: var(--font-primary);
+}
+
+.menu-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    color: var(--font-primary);
 }
